@@ -36,7 +36,7 @@ let activeMenu = ref('./');
 
 <template>
 
-  <div class=" text-gray-400 fixed w-full right-0 top-0 h-14 bg-dark-600 p-2 flex items-center justify-between">
+  <div class=" z-10 text-gray-400 fixed w-full right-0 top-0 h-14 bg-dark-600 p-2 flex items-center justify-between">
     <div class="flex items-center">
       <Button @on-click="test" class="lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -46,7 +46,7 @@ let activeMenu = ref('./');
       </Button>
       <p class="text-2xl ml-2 font-black">Luky<span class="text-indigo-600 font-bold">Play</span></p>
 
-      <ul class="flex mx-10">
+      <ul class=" hidden lg:flex mx-10 ">
         <li @click="activeMenu = menu.link" v-for="(menu, index) in menus" :key="index"
           class=" relative mx-2 px-1 flex flex-col justify-center items-center cursor-pointer transform transition-transform active:scale-125">
           <!-- <a :href="menu.link" :class="menu.link == activeMenu ? ' text-white font-bold' : ''">{{ menu.label }}</a> -->

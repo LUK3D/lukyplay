@@ -1,4 +1,5 @@
-<script lang="ts" setup>
+<script lang="ts" setup>import { slideLeft } from '../../animations';
+
 
 const menus = [
     {
@@ -29,7 +30,7 @@ const menus = [
 
 </script>
 <template>
-    <div class="w-full h-full py-10 pt-20 px-5 flex flex-col  overflow-y-auto">
+    <div class="w-full h-full py-10 pt-20 px-5 flex flex-col  overflow-y-auto" id="right-panel">
         <div class=" text-indigo-600 w-full  bg-dark-500 rounded-lg flex flex-col justify-center items-center p-12">
             <div class="w-10 h-10 bg-dark-800 flex justify-center items-center rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -100,7 +101,12 @@ const menus = [
 </template>
 <script lang="ts">
 export default {
+    mounted() {
+        slideLeft([
 
+            { target: '#right-panel', endDelay: 1600, endPosition: 550 },
+        ]);
+    },
 }
 </script>
 <style >
