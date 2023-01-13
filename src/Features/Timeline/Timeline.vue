@@ -1,5 +1,79 @@
 <script lang="ts" setup>
 import { slideUp } from '../../animations';
+
+
+const favSingers = [
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/556955/large_avatar',
+        name: 'Drake'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/139648/large_avatar',
+        name: 'Rihanna'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/197928/large_avatar',
+        name: 'Coldplay'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/182968/large_avatar',
+        name: 'Eminem'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/181875/large_avatar',
+        name: 'Marron 5'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/2083334/large_avatar',
+        name: 'Ed Sheeran'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/941964/large_avatar',
+        name: 'Bruno Mars'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/552177/large_avatar',
+        name: 'Kanye West'
+    },
+];
+
+const sugestions = [
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/4363463/large_avatar',
+        name: 'The Weeknd'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/537914/large_avatar',
+        name: '	Adele'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/553938/large_avatar',
+        name: 'Beyoncé'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/2596951/large_avatar',
+        name: 'Justin Bieber'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/217815/large_avatar',
+        name: 'Taylor Swift'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/313388/large_avatar',
+        name: '	U2'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/3277856/large_avatar',
+        name: 'Kendrick Lamar'
+    },
+    {
+        picture: 'https://images.sk-static.com/images/media/profile_images/artists/1134363/large_avatar',
+        name: 'Katy Perry'
+    },
+];
+
+
+
 </script>
 <template >
     <div class="w-full h-full overflow-y-auto px-5 flex flex-col py-20 text-gray-300">
@@ -49,15 +123,13 @@ import { slideUp } from '../../animations';
             <p class="font-bold">Your favorite artists</p>
 
             <div class="flex w-full overflow-x-auto py-5 justify-between overflow-y-hidden">
-                <div v-for="(item, index) in [0, 1, 2, 3]" :key="index"
+                <div v-for="(item, index) in favSingers" :key="index"
                     class="flex flex-col justify-center items-center mr-8 " :id="'fav_artist_' + index">
                     <!-- Avatar -->
                     <div class="w-18 h-18 bg-dark-400 rounded-full overflow-hidden">
-                        <img class="w-full h-full object-cover"
-                            src="https://images.pexels.com/photos/7086304/pexels-photo-7086304.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                            alt="">
+                        <img class="w-full h-full object-cover" :src="item.picture" alt="">
                     </div>
-                    <p class="uppercase text-center font-bold mt-2">Sia</p>
+                    <p class="uppercase text-center font-bold mt-2">{{ item.name }}</p>
                 </div>
 
             </div>
@@ -66,16 +138,15 @@ import { slideUp } from '../../animations';
         <div class="flex flex-col w-full py-5 ">
             <p class="font-bold" id="suggestions-text">Suggestions based what you've liked or played</p>
 
-            <div class="flex justify-between w-full overflow-x-auto py-5 overflow-y-hidden">
-                <div v-for="(item, index) in [0, 1, 2, 3]" :key="index"
-                    class="mr-2 flex flex-col justify-end  w-35 h-45 bg-dark-300 rounded-md relative overflow-hidden "
+            <div class="flex w-full overflow-x-auto py-5 justify-between overflow-y-hidden">
+                <div v-for="(item, index) in sugestions" :key="index"
+                    class="mr-2 flex flex-col justify-end  min-w-35 h-45 bg-dark-300 rounded-md relative overflow-hidden "
                     :id="'artist_' + index">
-                    <img class="w-full h-full absolute object-cover"
-                        src="https://images.pexels.com/photos/949274/pexels-photo-949274.jpeg?auto=compress&cs=tinysrgb&w=1600">
+                    <img class="w-full h-full absolute object-cover" :src="item.picture">
 
                     <div class="w-full flex flex-col z-10 bg-gradient-to-b from-transparent to-black">
-                        <p class="p-2 font-bold text-sm">For you</p>
-                        <p class="p-2  text-sm">Selena Gomez</p>
+                        <p class="p-2 font-bold text-sm">Music name {{ index }}</p>
+                        <p class="p-2  text-sm">{{ item.name }}</p>
                     </div>
                 </div>
             </div>
@@ -97,11 +168,19 @@ export default {
             { target: '#fav_artist_1', endDelay: 700, endPosition: 250 },
             { target: '#fav_artist_2', endDelay: 800, endPosition: 250 },
             { target: '#fav_artist_3', endDelay: 900, endPosition: 250 },
+            { target: '#fav_artist_4', endDelay: 1000, endPosition: 250 },
+            { target: '#fav_artist_5', endDelay: 1100, endPosition: 250 },
+            { target: '#fav_artist_6', endDelay: 1200, endPosition: 250 },
+            { target: '#fav_artist_7', endDelay: 1300, endPosition: 250 },
             { target: '#suggestions-text', endDelay: 1000, endPosition: 250 },
             { target: '#artist_0', endDelay: 1100, endPosition: 350 },
             { target: '#artist_1', endDelay: 1200, endPosition: 350 },
             { target: '#artist_2', endDelay: 1300, endPosition: 350 },
             { target: '#artist_3', endDelay: 1400, endPosition: 350 },
+            { target: '#artist_4', endDelay: 1500, endPosition: 350 },
+            { target: '#artist_5', endDelay: 1600, endPosition: 350 },
+            { target: '#artist_6', endDelay: 1700, endPosition: 350 },
+            { target: '#artist_7', endDelay: 1800, endPosition: 350 },
         ]);
     },
 

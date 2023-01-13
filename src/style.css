@@ -10,3 +10,25 @@ body,
 
 
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0000008a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(77, 77, 77, 0.589);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
