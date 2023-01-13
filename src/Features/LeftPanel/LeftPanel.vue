@@ -44,17 +44,17 @@ const menus = [
             <p class="text-sm text-dark-50 my-3">Los Angeles, United States</p>
 
             <div class="mt-2 w-full flex justify-between">
-                <div class="dark:bg-dark-500 bg-white w-full p-2 rounded-lg text-center mr-2">
+                <div class="dark:bg-dark-500 bg-gray-200 w-full p-2 rounded-lg text-center mr-2">
                     <p class="text-xl font-bold">256K</p>
                     <p class="text-dark-50 text-sm">Followers</p>
                 </div>
-                <div class="dark:bg-dark-500 bg-white w-full p-2 rounded-lg text-center ml-2">
+                <div class="dark:bg-dark-500 bg-gray-200 w-full p-2 rounded-lg text-center ml-2">
                     <p class="text-xl font-bold">20</p>
                     <p class="text-dark-50 text-sm">Following</p>
                 </div>
             </div>
             <div class="flex flex-col justify-start w-full pt-5">
-                <p class="font-bold text-cyan-400 dark:text-green-600 mb-2">MENU</p>
+                <p class="font-bold text-blue-400 dark:text-green-600 mb-2">MENU</p>
                 <ul class="text-dark-50">
                     <li v-for="(menu, index) in menus" :key="index" class="my-3 cursor-pointer">{{ menu.label }}</li>
                 </ul>

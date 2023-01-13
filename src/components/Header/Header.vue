@@ -46,7 +46,7 @@ let active = ref(false);
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
         </svg>
       </Button>
-      <p class="text-2xl ml-2 font-black">Luky<span class="text-cyan-400 dark:text-indigo-600 font-bold">Play</span></p>
+      <p class="text-2xl ml-2 font-black">Luky<span class="text-blue-400 dark:text-indigo-600 font-bold">Play</span></p>
 
       <ul class=" hidden lg:flex mx-10 ">
         <li @click="activeMenu = menu.link" v-for="(menu, index) in menus" :key="index"

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { slideUp } from '../../animations';
-
+import singer from '../../assets/singer.png'
 
 const favSingers = [
     {
@@ -79,24 +79,27 @@ const sugestions = [
     <div class="w-full h-full overflow-y-auto px-5 flex flex-col py-20 dark:text-gray-300 text-gray-700">
 
         <!-- Main Slider -->
-        <div class="w-full h-60 dark:bg-dark-500 bg-white rounded-lg flex relative mb-10" id="main-slider">
+        <div class="w-full h-60 lg:h-90 dark:bg-dark-500 bg-white rounded-lg flex relative mb-10" id="main-slider">
             <!-- Content -->
-            <div class="flex flex-col justify-between h-full">
+            <div class="flex flex-col justify-between h-full w-full">
                 <div class="p-5 uppercase" id="main-slider-tittle">
-                    <p class="text-4xl font-bold">Ivan Torrent</p>
-                    <p class="text-4xl font-bold">Music</p>
+                    <p class="text-4xl lg:text-6xl font-bold">Ivan Torrent</p>
+                    <p class="text-4xl lg:text-6xl font-bold">Music</p>
                     <p class="text-dark-50">Ivan Torrent, Spain</p>
                 </div>
 
                 <div class="p-5 flex flex-col" id="main-slider-progress">
-                    <p class="text-2xl font-light">03/<span class="text-cyan-400 dark:text-green-500">06</span></p>
+                    <p class="text-2xl font-light">03/<span class="text-blue-400 dark:text-green-500">06</span></p>
                     <div class="w-[80px] h-[2px] bg-gray-300 dark:bg-white flex">
-                        <div class="w-2/4 h-full bg-cyan-400 dark:bg-green-500"></div>
+                        <div class="w-2/4 h-full bg-blue-400 dark:bg-green-500"></div>
                     </div>
                 </div>
             </div>
             <!-- Image -->
-            <div></div>
+            <div class="w-full flex justify-end relative">
+                <img :src="singer" alt=""
+                    class="h-[340px]  object-contain object-bottom hidden md:flex bottom-0 absolute">
+            </div>
 
             <!-- Play button -->
 

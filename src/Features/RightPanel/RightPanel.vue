@@ -41,7 +41,7 @@ const playlist = [
 <template>
     <div class="w-full h-full py-10 pt-20 px-5 flex flex-col  overflow-y-auto" id="right-panel">
         <div
-            class=" dark:text-indigo-600 text-orange-400 w-full  dark:bg-dark-500 bg-cyan-300 rounded-lg flex flex-col justify-center items-center p-12">
+            class=" dark:text-indigo-600 text-orange-400 w-full  dark:bg-dark-500 bg-blue-400 rounded-lg flex flex-col justify-center items-center p-12">
             <div class="w-10 h-10 dark:bg-dark-800 bg-gray-100 flex justify-center items-center rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                     <path fill-rule="evenodd"

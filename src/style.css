@@ -14,21 +14,21 @@ body,
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
-  height: 10px;
+  height: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0000008a;
+  background: #00000028;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(77, 77, 77, 0.589);
+  background: rgba(36, 36, 36, 0.226);
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgba(73, 73, 73, 0.418);
 }
