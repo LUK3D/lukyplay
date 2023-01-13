@@ -76,10 +76,10 @@ const sugestions = [
 
 </script>
 <template >
-    <div class="w-full h-full overflow-y-auto px-5 flex flex-col py-20 text-gray-300">
+    <div class="w-full h-full overflow-y-auto px-5 flex flex-col py-20 dark:text-gray-300 text-gray-700">
 
         <!-- Main Slider -->
-        <div class="w-full h-60 bg-dark-500 rounded-lg flex relative mb-10" id="main-slider">
+        <div class="w-full h-60 dark:bg-dark-500 bg-white rounded-lg flex relative mb-10" id="main-slider">
             <!-- Content -->
             <div class="flex flex-col justify-between h-full">
                 <div class="p-5 uppercase" id="main-slider-tittle">
@@ -89,9 +89,9 @@ const sugestions = [
                 </div>
 
                 <div class="p-5 flex flex-col" id="main-slider-progress">
-                    <p class="text-2xl font-light">03/<span class="text-green-500">06</span></p>
-                    <div class="w-[80px] h-[2px] bg-white flex">
-                        <div class="w-2/4 h-full bg-green-500"></div>
+                    <p class="text-2xl font-light">03/<span class="text-cyan-400 dark:text-green-500">06</span></p>
+                    <div class="w-[80px] h-[2px] bg-gray-300 dark:bg-white flex">
+                        <div class="w-2/4 h-full bg-cyan-400 dark:bg-green-500"></div>
                     </div>
                 </div>
             </div>
@@ -100,12 +100,12 @@ const sugestions = [
 
             <!-- Play button -->
 
-            <div class=" group p-3 flex flex-col absolute right-10 -bottom-10 w-[100px] h-[100px]  border border-green-500 border-opacity-25 rounded-full "
+            <div class=" group p-3 flex flex-col absolute right-10 -bottom-10 w-[100px] h-[100px]  border border-orange-500 dark:border-green-500 border-opacity-25 rounded-full "
                 id="main-slider-play-button">
                 <div
-                    class=" transform transition-transform group-hover:scale-95 p-3 flex flex-col   w-full h-full  border border-green-500 border-opacity-25 rounded-full ">
+                    class=" transform transition-transform group-hover:scale-95 p-3 flex flex-col   w-full h-full  border border-orange-500 dark:border-green-500 border-opacity-25 rounded-full ">
                     <button
-                        class="transform transition-transform active:scale-95  group-hover:shadow-md group-hover:shadow-green-800 flex justify-center items-center bg-green-600 w-full h-full rounded-full">
+                        class="transform transition-transform active:scale-95  group-hover:shadow-md group-hover:shadow-orange-800 dark:group-hover:shadow-green-800 flex justify-center items-center bg-orange-600 dark:bg-green-600 text-white dark:text-gray-800 w-full h-full rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                             class="w-6 h-6 group-hover:scale-125 transform transition-transform ">
                             <path fill-rule="evenodd"
@@ -144,7 +144,7 @@ const sugestions = [
                     :id="'artist_' + index">
                     <img class="w-full h-full absolute object-cover" :src="item.picture">
 
-                    <div class="w-full flex flex-col z-10 bg-gradient-to-b from-transparent to-black">
+                    <div class=" text-white w-full flex flex-col z-10 bg-gradient-to-b from-transparent to-black">
                         <p class="p-2 font-bold text-sm">Music name {{ index }}</p>
                         <p class="p-2  text-sm">{{ item.name }}</p>
                     </div>
