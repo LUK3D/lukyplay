@@ -30,7 +30,7 @@ const menus = [
 
 </script>
 <template>
-    <div class="w-full h-full py-10 pt-20 px-5 flex flex-col  overflow-y-auto" id="left-panel">
+    <div class="w-full h-full pb-30 pt-20 px-5 flex flex-col  overflow-y-auto" id="left-panel">
         <div class=" text-orange-600 dark:text-indigo-600 w-full h-[160px] dark:bg-dark-500 bg-white rounded-lg flex justify-center items-center p-10"
             id="music-logo">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">

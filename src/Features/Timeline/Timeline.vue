@@ -31,10 +31,7 @@ const favSingers = [
         picture: 'https://images.sk-static.com/images/media/profile_images/artists/941964/large_avatar',
         name: 'Bruno Mars'
     },
-    {
-        picture: 'https://images.sk-static.com/images/media/profile_images/artists/552177/large_avatar',
-        name: 'Kanye West'
-    },
+
 ];
 
 const sugestions = [
@@ -58,18 +55,9 @@ const sugestions = [
         picture: 'https://images.sk-static.com/images/media/profile_images/artists/217815/large_avatar',
         name: 'Taylor Swift'
     },
-    {
-        picture: 'https://images.sk-static.com/images/media/profile_images/artists/313388/large_avatar',
-        name: '	U2'
-    },
-    {
-        picture: 'https://images.sk-static.com/images/media/profile_images/artists/3277856/large_avatar',
-        name: 'Kendrick Lamar'
-    },
-    {
-        picture: 'https://images.sk-static.com/images/media/profile_images/artists/1134363/large_avatar',
-        name: 'Katy Perry'
-    },
+
+
+
 ];
 
 
